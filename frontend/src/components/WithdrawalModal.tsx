@@ -12,8 +12,6 @@ export default function WithdrawalModal({ worker, open, onClose }: { worker: Wor
     const notificationContext = useNotification();
     const router = useRouter();
     const showNotification = notificationContext ? notificationContext.showNotification : () => { };
-
-    console.log('worker: ', worker);
     
   const formik = useFormik({
     initialValues: {
