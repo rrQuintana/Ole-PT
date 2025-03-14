@@ -27,3 +27,7 @@ app.include_router(withdraw_routes, prefix="/api/v1/withdrawals", tags=["Withdra
 @app.get("/")
 def home():
     return {"message": "API funcionando 🚀"}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
