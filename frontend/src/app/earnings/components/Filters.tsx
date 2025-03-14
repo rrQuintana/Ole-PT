@@ -20,7 +20,7 @@ export default function FilterForm({ workers, setFilters }: { workers: Worker[];
 
   const formik = useFormik({
     initialValues: {
-      worker: null,
+      worker: null as Worker | null,
       start_date: "",
       end_date: "",
       specific_date: "",
@@ -31,7 +31,7 @@ export default function FilterForm({ workers, setFilters }: { workers: Worker[];
       const filters:any = {};
 
       if(worker) {
-        filters["worker_id"] = worker.id;
+        filters["worker_id"] = worker?.id;
       }
 
       if (start_date && !specific_date) {
@@ -78,7 +78,7 @@ export default function FilterForm({ workers, setFilters }: { workers: Worker[];
           <Autocomplete
             fullWidth
             options={workers}
-            getOptionLabel={(option) => option.first_name + " " + option.last_name}
+            getOptionLabel={(option: Worker) => option.first_name + " " + option.last_name}
             renderInput={(params) => 
             (
             <TextField 
