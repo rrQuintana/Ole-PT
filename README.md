@@ -104,3 +104,5 @@ $ uvicorn backend.api.main:app --reload
   ```
 
 🔥 **¡Listo! Tu API está configurada y en funcionamiento.**
+
+Si quieres probar la api en la nube puedes hacerlo con `https://ole-pt.onrender.com/api/v1/`
