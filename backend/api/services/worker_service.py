@@ -1,10 +1,10 @@
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
-from backend.db.models.earning_model import Earning
-from backend.db.models.withdrawal_model import Withdrawal
-from backend.db.models.worker_model import Worker
-from backend.db.schemas.worker_schema import WorkerCreate
+from db.models.earning_model import Earning
+from db.models.withdrawal_model import Withdrawal
+from db.models.worker_model import Worker
+from db.schemas.worker_schema import WorkerCreate
 
 def create_worker(db: Session, worker_data: WorkerCreate):
     existing_worker = db.query(Worker).filter(Worker.phone_number == worker_data.phone_number).first()

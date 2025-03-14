@@ -1,14 +1,14 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.db.database import Base, engine
+from db.database import Base, engine
 
-from backend.db.models import worker_model, earning_model, withdrawal_model
+from db.models import worker_model, earning_model, withdrawal_model
 
 Base.metadata.create_all(bind=engine)
 
-from backend.api.routes.earnings_routes import router as earnings_routes
-from backend.api.routes.withdraw_routes import router as withdraw_routes
-from backend.api.routes.workers_routes import router as workers_routes
+from api.routes.earnings_routes import router as earnings_routes
+from api.routes.withdraw_routes import router as withdraw_routes
+from api.routes.workers_routes import router as workers_routes
 
 app = FastAPI(title="Workers Earnings API")
 

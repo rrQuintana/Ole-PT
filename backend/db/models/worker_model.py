@@ -1,8 +1,8 @@
 from sqlalchemy import Column, Integer, String, Float
 from sqlalchemy.orm import relationship
-from backend.db.database import Base
-from backend.db.models.earning_model import Earning
-from backend.db.models.withdrawal_model import Withdrawal
+from db.database import Base
+from db.models.earning_model import Earning
+from db.models.withdrawal_model import Withdrawal
 
 class Worker(Base):
     __tablename__ = "workers"

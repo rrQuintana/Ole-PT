@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from backend.db.database import get_db
-from backend.api.services.earning_service import create_earning, get_earnings
-from backend.db.schemas.earning_schema import Earning, EarningCreate, EarningResponse
+from db.database import get_db
+from api.services.earning_service import create_earning, get_earnings
+from db.schemas.earning_schema import Earning, EarningCreate, EarningResponse
 from typing import List, Optional
 from datetime import date
 

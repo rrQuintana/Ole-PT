@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from backend.db.database import get_db
-from backend.db.schemas.worker_schema import Worker, WorkerCreate
-from backend.api.services.worker_service import create_worker, get_workers, delete_worker, edit_worker, get_worker
+from db.database import get_db
+from db.schemas.worker_schema import Worker, WorkerCreate
+from api.services.worker_service import create_worker, get_workers, delete_worker, edit_worker, get_worker
 from typing import List
 
 router = APIRouter()

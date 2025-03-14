@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from backend.db.database import get_db
-from backend.db.schemas.withdrawal_schema import Withdrawal, WithdrawalCreate
-from backend.api.services.withdrawal_service import create_withdrawal, get_withdrawals
+from db.database import get_db
+from db.schemas.withdrawal_schema import Withdrawal, WithdrawalCreate
+from api.services.withdrawal_service import create_withdrawal, get_withdrawals
 from typing import List, Optional
 
 router = APIRouter()

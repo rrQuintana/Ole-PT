@@ -1,8 +1,8 @@
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
-from backend.db.models.withdrawal_model import Withdrawal
-from backend.db.models.worker_model import Worker
-from backend.db.schemas.withdrawal_schema import WithdrawalCreate
+from db.models.withdrawal_model import Withdrawal
+from db.models.worker_model import Worker
+from db.schemas.withdrawal_schema import WithdrawalCreate
 
 def withdraw_money(db: Session, worker_id: int, amount: float):
     worker = db.query(Worker).filter(Worker.id == worker_id).first()

@@ -2,8 +2,8 @@
 from typing import List
 from pydantic import BaseModel
 
-from backend.db.schemas.earning_schema import Earning
-from backend.db.schemas.withdrawal_schema import Withdrawal
+from db.schemas.earning_schema import Earning
+from db.schemas.withdrawal_schema import Withdrawal
 
 class WorkerBase(BaseModel):
     first_name: str

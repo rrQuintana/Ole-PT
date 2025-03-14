@@ -1,10 +1,10 @@
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
-from backend.db.schemas.earning_schema import EarningCreate, EarningResponse, WorkerInfo
+from db.schemas.earning_schema import EarningCreate, EarningResponse, WorkerInfo
 from datetime import date
 from typing import Optional
-from backend.db.models.earning_model import Earning
-from backend.db.models.worker_model import Worker
+from db.models.earning_model import Earning
+from db.models.worker_model import Worker
 
 def create_earning(db: Session, earning: EarningCreate):
     db_earning = Earning(**earning.dict())

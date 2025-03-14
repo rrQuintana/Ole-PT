@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, Float, Date, ForeignKey
 from sqlalchemy.orm import relationship
-from backend.db.database import Base
+from db.database import Base
 
 class Withdrawal(Base):
     __tablename__ = "withdrawals"
